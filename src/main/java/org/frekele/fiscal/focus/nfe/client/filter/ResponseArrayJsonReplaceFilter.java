@@ -24,6 +24,8 @@ public class ResponseArrayJsonReplaceFilter implements ClientResponseFilter {
     private static final String CONSULTAR_WEB_HOOKS_REL_PATH = "/v2/hooks?hooks=hooks";
 
     private static final String CONSULTAR_NCM_REL_PATH = "/v2/ncms";
+    
+    private static final String CONSULTAR_CFOP_REL_PATH = "/v2/cfops";
 
     private static final String CONSULTAR_BACKUPS_REL_PATH = "/v2/backups/";
 
@@ -36,6 +38,7 @@ public class ResponseArrayJsonReplaceFilter implements ClientResponseFilter {
                 if (relativePath.contains(CONSULTAR_MANIFESTOS_REL_PATH) ||
                     relativePath.contains(CONSULTAR_WEB_HOOKS_REL_PATH) ||
                     relativePath.contains(CONSULTAR_NCM_REL_PATH) ||
+                    relativePath.contains(CONSULTAR_CFOP_REL_PATH) ||
                     relativePath.contains(CONSULTAR_BACKUPS_REL_PATH)) {
                     FocusNFeUtils.replaceResponseBodyJsonArrayToJsonObject(responseContext);
                     this.getLogger().debug("replaceResponseBodyJsonArrayToJsonObject --> [.....] to { arrayValues : [.....] }");
