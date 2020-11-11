@@ -14,12 +14,6 @@ import org.frekele.fiscal.focus.nfe.client.model.response.cfop.CfopConsultarTodo
 public interface FocusCfopV2Repository extends Serializable {
 
 	/**
-	 * GET - Consultar um CFOP individualmente. Exemplo de requisição: GET
-	 * https://api.focusnfe.com.br/v2/cfops?CODIGO_CFOP
-	 */
-	CfopConsultarResponse consultar(String cfop);
-
-	/**
 	 * GET - Consultar os CFOPs disponíveis. Exemplo de requisição: GET
 	 * https://api.focusnfe.com.br/v2/cfops
 	 */

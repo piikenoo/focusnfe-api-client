@@ -53,17 +53,6 @@ public class FocusCfopV2RepositoryImpl implements FocusCfopV2Repository {
 	}
 
 	/**
-	 * GET - Consultar um CFOP individualmente. Exemplo de requisição: GET
-	 * https://api.focusnfe.com.br/v2/cfops?CODIGO_CFOP
-	 */
-	@Override
-	public CfopConsultarResponse consultar(String cfop) {
-		FocusNFeUtils.throwObject(cfop, "cfop");
-		FocusCfopV2ProxyClient proxyClient = this.getProxyClient();
-		return proxyClient.consultar(this.getAuth().getBasicAuthorization(), cfop);
-	}
-
-	/**
      * GET - Consultar os CFOPs disponíveis.
      * Exemplo de requisição: GET https://api.focusnfe.com.br/v2/cfops
      */

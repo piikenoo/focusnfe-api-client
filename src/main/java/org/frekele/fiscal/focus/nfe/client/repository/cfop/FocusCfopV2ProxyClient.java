@@ -27,14 +27,6 @@ import org.frekele.fiscal.focus.nfe.client.model.response.cfop.CfopConsultarTodo
 interface FocusCfopV2ProxyClient extends Serializable {
 
 	/**
-	 * GET - Consultar um CFOP individualmente. Exemplo de requisição: GET
-	 * https://api.focusnfe.com.br/v2/cfops?CODIGO_CFOP
-	 */
-	@GET
-	@Path("cfops?{cfop}")
-	CfopConsultarResponse consultar(@HeaderParam("Authorization") String authorization, @PathParam("cfop") String cfop);
-
-	/**
      * GET - Consultar os CFOPs disponíveis.
      * Exemplo de requisição: GET https://api.focusnfe.com.br/v2/cfops
      */
